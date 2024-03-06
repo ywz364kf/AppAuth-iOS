@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "AppAuth"
-  s.version      = "1.6.2"
+  s.version      = "1.6.3"
   s.summary      = "AppAuth for iOS and macOS is a client SDK for communicating with OAuth 2.0 and OpenID Connect providers."
 
   s.description  = <<-DESC
@@ -68,6 +68,7 @@ It follows the OAuth 2.0 for Native Apps best current practice
   s.subspec 'TV' do |tv|
     tv.source_files = "Source/AppAuthTV.h", "Source/AppAuthTV/*.{h,m}"
     tv.dependency 'AppAuth/Core'
+    tv.dependency 'AppAuth/ExternalUserAgent'
   end
 
   s.default_subspecs = 'Core', 'ExternalUserAgent'
